@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18995" started-at="2017-09-23T06:03:48Z" finished-at="2017-09-23T06:04:07Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18995" started-at="2017-09-23T06:03:48Z" finished-at="2017-09-23T06:04:07Z">
+      <class name="com.zopa.Tests.SIgnUpFlow">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@77caeb3e]" name="beforeClass" is-config="true" duration-ms="6769" started-at="2017-09-23T00:03:48Z" finished-at="2017-09-23T00:03:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="SignUpFlow()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@77caeb3e]" name="SignUpFlow" duration-ms="12134" started-at="2017-09-23T00:03:54Z" finished-at="2017-09-23T00:04:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignUpFlow -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@77caeb3e]" name="afterClass" is-config="true" duration-ms="82" started-at="2017-09-23T00:04:07Z" finished-at="2017-09-23T00:04:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.zopa.Tests.SIgnUpFlow -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
