@@ -1,19 +1,11 @@
 package com.zopa.Pages;
 
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-
-
 import Resources.GenerateData;
 
   
@@ -21,8 +13,7 @@ import Resources.GenerateData;
 public class SignUpPage {
 	
 	   GenerateData genData = new GenerateData();
-	   ExtentReports report;
-	   ExtentTest test;
+	   
 	
 	
 		@FindBy(id = "member_email")
@@ -87,7 +78,7 @@ public class SignUpPage {
 	    
  
   public void PersonalInformation() {
-	  member_email.sendKeys(genData.generateEmail(30));
+	  
 	  title.click();
 	  first_name.sendKeys(genData.generateRandomString(10));
 	  last_name.sendKeys(genData.generateRandomString(10));

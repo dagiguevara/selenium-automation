@@ -1,11 +1,8 @@
 package com.zopa.Tests;
 
 import org.testng.annotations.Test;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.zopa.Pages.SignUpPage;
-import Resources.GenerateData;
 import Resources.Init;
 import Resources.extentFactory;
 import org.openqa.selenium.By;
