@@ -2,27 +2,23 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30763" started-at="2017-09-23T07:03:40Z" finished-at="2017-09-23T07:04:11Z">
+  <suite name="Default suite" duration-ms="47497" started-at="2017-09-23T08:02:57Z" finished-at="2017-09-23T08:03:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30763" started-at="2017-09-23T07:03:40Z" finished-at="2017-09-23T07:04:11Z">
+    <test name="Default test" duration-ms="47497" started-at="2017-09-23T08:02:57Z" finished-at="2017-09-23T08:03:44Z">
       <class name="com.zopa.Tests.SIgnUpFlow">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@42d80b78]" name="beforeMethod" is-config="true" duration-ms="28899" started-at="2017-09-23T01:03:40Z" finished-at="2017-09-23T01:04:09Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@1e88b3c]" name="beforeMethod" is-config="true" duration-ms="44220" started-at="2017-09-23T02:02:57Z" finished-at="2017-09-23T02:03:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="SignUpFlow()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@42d80b78]" name="SignUpFlow" duration-ms="1716" started-at="2017-09-23T01:04:09Z" finished-at="2017-09-23T01:04:11Z">
+        <test-method status="PASS" signature="SignUpFlow()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@1e88b3c]" name="SignUpFlow" duration-ms="3163" started-at="2017-09-23T02:03:41Z" finished-at="2017-09-23T02:03:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUpFlow -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@42d80b78]" name="afterMethod" is-config="true" duration-ms="0" started-at="2017-09-23T01:04:11Z" finished-at="2017-09-23T01:04:11Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@1e88b3c]" name="afterMethod" is-config="true" duration-ms="98" started-at="2017-09-23T02:03:44Z" finished-at="2017-09-23T02:03:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@42d80b78]" name="afterClass" is-config="true" duration-ms="133" started-at="2017-09-23T01:04:11Z" finished-at="2017-09-23T01:04:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
       </class> <!-- com.zopa.Tests.SIgnUpFlow -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

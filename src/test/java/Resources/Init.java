@@ -21,7 +21,7 @@ public class Init {
 		 driver = new ChromeDriver();
 		 driver.get("http://www.zopa.com");
 		 driver.manage().window().maximize();
-		 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	 
+		 driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);	 
 		 driver.findElement(By.xpath("//*[@id=\"footer\"]/div[3]/p/a[2]")).click();
 		 HomePage home =  PageFactory.initElements(driver, HomePage.class); 
 		 home.getLoanButton();
@@ -31,6 +31,8 @@ public class Init {
 
   @AfterMethod
   public void afterMethod() {
+	  
+	  driver.quit();
   }
 
 }

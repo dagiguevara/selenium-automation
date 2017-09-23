@@ -47,8 +47,11 @@ public class SignUpPage {
 	    @FindBy(id = "address_postcode")
 	    WebElement address_postcode;
 	    
-	    @FindBy(id = "find_address")
+	    @FindBy(name = "find_address")
 	    WebElement find_address;
+	    
+	    @FindBy(xpath = ("//*[@id=\"address_possible_address\"]/option[1]"))
+	    WebElement selectAddress;
 	    
 	    @FindBy(xpath = "//*[@id=\"content\"]/div/div/div/form/fieldset[3]/div[1]/p/span[2]/label")
 	    WebElement finantial_details;
@@ -64,7 +67,15 @@ public class SignUpPage {
 	    
 	    @FindBy(id = "member_password")
 	    WebElement member_password;
-	        
+	    
+	    @FindBy(xpath = "//*[@id=\"address_from_2i\"]/option[2]")
+	    WebElement month_moveIn;
+	    
+	    @FindBy(xpath = "//*[@id=\"address_from_1i\"]/option[3]")
+	    WebElement year_moveIn;   
+	    
+	    @FindBy(name = "select_address")
+	    WebElement select_address;
 	    
  
   public void sendInformation() {
@@ -77,7 +88,12 @@ public class SignUpPage {
 	  birth_month.sendKeys(genData.generateRandomNumber(2));
 	  birth_year.sendKeys(genData.generateRandomNumber(4));
 	  loan_reason.click();
-	  address_postcode.sendKeys(genData.generateRandomNumber(5));
+	  address_postcode.sendKeys("GL53 7BY");
+	  find_address.click();
+	  selectAddress.click();
+	  month_moveIn.click();
+	  year_moveIn.click();
+	  select_address.click();
 	  finantial_details.click();
 	  annual_income.sendKeys(genData.generateRandomNumber(5));
 	  own_home.click();
@@ -99,16 +115,14 @@ public class SignUpPage {
 		    writer.println("birthday: " + birth_day.getAttribute("value"));
 		    writer.println(" " +  birth_month.getAttribute("value"));
 		    writer.println(" " + birth_year.getAttribute("value"));
-		    writer.println("Address Post Code: " + address_postcode.getAttribute("value"));
+		    writer.println("Address Post Code: GL53 7BY ");
 		    writer.println("Annual Income: " + annual_income.getAttribute("value"));
 		    writer.println("Member Password: " + member_password.getAttribute("value"));
 		    writer.close();
 		} catch (IOException e) {
-		   // do something
+		   
 		}
 	 
-	 
-
 	   
   }
  
