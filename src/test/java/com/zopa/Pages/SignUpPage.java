@@ -8,6 +8,12 @@ import java.io.PrintWriter;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+
 import Resources.GenerateData;
 
   
@@ -15,6 +21,8 @@ import Resources.GenerateData;
 public class SignUpPage {
 	
 	   GenerateData genData = new GenerateData();
+	   ExtentReports report;
+	   ExtentTest test;
 	
 	
 		@FindBy(id = "member_email")
@@ -78,7 +86,7 @@ public class SignUpPage {
 	    WebElement select_address;
 	    
  
-  public void sendInformation() {
+  public void PersonalInformation() {
 	  member_email.sendKeys(genData.generateEmail(30));
 	  title.click();
 	  first_name.sendKeys(genData.generateRandomString(10));
@@ -88,22 +96,30 @@ public class SignUpPage {
 	  birth_month.sendKeys(genData.generateRandomNumber(2));
 	  birth_year.sendKeys(genData.generateRandomNumber(4));
 	  loan_reason.click();
+	
+  }
+  
+  public void AddressHistory() {
 	  address_postcode.sendKeys("GL53 7BY");
 	  find_address.click();
 	  selectAddress.click();
 	  month_moveIn.click();
 	  year_moveIn.click();
 	  select_address.click();
+	  
+  }
+  
+  public void FinantialDetails() {
 	  finantial_details.click();
 	  annual_income.sendKeys(genData.generateRandomNumber(5));
 	  own_home.click();
 	  //montly_rent.sendKeys(genData.generateRandomNumber(5));
 	  member_password.click();
-	  member_password.sendKeys(genData.generateRandomAlphaNumeric(8));
+	  member_password.sendKeys(genData.generateRandomAlphaNumeric(8));  
 	  
-	  
-	
   }
+
+
   
   public void  submit() {
 	  try{
@@ -119,6 +135,7 @@ public class SignUpPage {
 		    writer.println("Annual Income: " + annual_income.getAttribute("value"));
 		    writer.println("Member Password: " + member_password.getAttribute("value"));
 		    writer.close();
+		    
 		} catch (IOException e) {
 		   
 		}
