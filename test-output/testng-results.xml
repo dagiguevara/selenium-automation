@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28446" started-at="2017-09-23T22:28:27Z" finished-at="2017-09-23T22:28:55Z">
+  <suite name="Default suite" duration-ms="27863" started-at="2017-09-24T00:06:54Z" finished-at="2017-09-24T00:07:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28446" started-at="2017-09-23T22:28:27Z" finished-at="2017-09-23T22:28:55Z">
-      <class name="com.zopa.Tests.SIgnUpFlow">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@3bfdc050]" name="beforeMethod" is-config="true" duration-ms="20219" started-at="2017-09-23T16:28:27Z" finished-at="2017-09-23T16:28:47Z">
+    <test name="Default test" duration-ms="27863" started-at="2017-09-24T00:06:54Z" finished-at="2017-09-24T00:07:22Z">
+      <class name="com.zopa.Tests.SignUp_SadPath">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.zopa.Tests.SignUp_SadPath@3bfdc050]" name="beforeMethod" is-config="true" duration-ms="18815" started-at="2017-09-23T18:06:54Z" finished-at="2017-09-23T18:07:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="SignUpFlow()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@3bfdc050]" name="SignUpFlow" duration-ms="8211" started-at="2017-09-23T16:28:47Z" finished-at="2017-09-23T16:28:55Z">
+        <test-method status="PASS" signature="emailVerification()[pri:0, instance:com.zopa.Tests.SignUp_SadPath@3bfdc050]" name="emailVerification" duration-ms="8718" started-at="2017-09-23T18:07:13Z" finished-at="2017-09-23T18:07:21Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SignUpFlow -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.zopa.Tests.SIgnUpFlow@3bfdc050]" name="tearDown" is-config="true" duration-ms="1" started-at="2017-09-23T16:28:55Z" finished-at="2017-09-23T16:28:55Z">
+        </test-method> <!-- emailVerification -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.zopa.Tests.SignUp_SadPath@3bfdc050]" name="tearDown" is-config="true" duration-ms="317" started-at="2017-09-23T18:07:21Z" finished-at="2017-09-23T18:07:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SignUpFlow status=SUCCESS method=SIgnUpFlow.SignUpFlow()[pri:0, instance:com.zopa.Tests.SIgnUpFlow@3bfdc050] output={null}]]]>
+                <![CDATA[[TestResult name=emailVerification status=SUCCESS method=SignUp_SadPath.emailVerification()[pri:0, instance:com.zopa.Tests.SignUp_SadPath@3bfdc050] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.zopa.Tests.SIgnUpFlow -->
+      </class> <!-- com.zopa.Tests.SignUp_SadPath -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

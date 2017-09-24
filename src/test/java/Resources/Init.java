@@ -42,7 +42,7 @@ public class Init {
   
 	@AfterMethod
 	public void tearDown(ITestResult testResult) throws IOException {
-		/*
+		
 		if (testResult.getStatus() == ITestResult.FAILURE) {
 			screenshots.takeScreenshot(driver, testResult.getName());
 			String path = screenshots.takeScreenshot(driver, testResult.getName());
@@ -52,7 +52,7 @@ public class Init {
 		}	
 		driver.quit();
 		report.endTest(test);
-		report.flush(); */
+		report.flush(); 
 
 	}
 
