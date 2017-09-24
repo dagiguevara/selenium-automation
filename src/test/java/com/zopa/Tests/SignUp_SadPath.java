@@ -2,6 +2,7 @@ package com.zopa.Tests;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
@@ -24,4 +25,18 @@ public class SignUp_SadPath extends Init {
 	  test.log(LogStatus.PASS, "Email assertion PASSED");
 
   } 
+  
+  @Test 
+  public void PostCodeValidation() {
+	  report = extentFactory.getInstance();
+	  test = report.startTest("Postcode Validation");
+	  driver.findElement(By.id("address_postcode")).sendKeys("00000");
+	  test.log(LogStatus.PASS, "sending invalid postcode");
+	  driver.findElement(By.name("find_address")).click();
+	  test.log(LogStatus.PASS, "finding address");
+	  String message = driver.findElement(By.id("error_addresses")).getText();
+	  Assert.assertTrue(message.contains("We can't find this address, please try again"));
+	  test.log(LogStatus.PASS, "getting Invalid postcode error message");
+	  
+  }
 }
