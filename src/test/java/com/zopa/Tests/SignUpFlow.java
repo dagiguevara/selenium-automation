@@ -15,7 +15,7 @@ public class SignUpFlow extends Init {
 	
 	
 @Test
-  public void SignUpFlow(){
+  public void  SignUpFlow() throws InterruptedException{
 	
 	report = extentFactory.getInstance();
 	test = report.startTest("Sign Up Flow Happy Path");

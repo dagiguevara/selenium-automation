@@ -1,9 +1,14 @@
 package com.zopa.Pages;
 
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.Random;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import Resources.GenerateData;
@@ -13,12 +18,13 @@ import Resources.GenerateData;
 public class SignUpPage {
 	
 	   GenerateData genData = new GenerateData();
+	   WebDriver driver;
 	   
 	
 	
 		@FindBy(id = "member_email")
 	    WebElement member_email;
-
+		
 	    @FindBy(xpath = "//*[@id=\"content\"]/div/div/div/form/fieldset[1]/div[2]/p[1]/span[2]/label")
 	    WebElement title;
 
@@ -58,7 +64,7 @@ public class SignUpPage {
 	    @FindBy(id = "applications_loan_apply_salary")
 	    WebElement annual_income;
 	    
-	    @FindBy(xpath = "//*[@id=\"content\"]/div/div/div/form/fieldset[3]/div[3]/p[1]/span[2]/label")
+	    @FindBy(xpath = "//*[@id=\"content\"]/div/div/div/form/fieldset[3]/div[3]/p[1]/span[3]/label")
 	    WebElement own_home;
 	    
 	    @FindBy(id = "applications_loan_apply_rent")
@@ -70,14 +76,26 @@ public class SignUpPage {
 	    @FindBy(xpath = "//*[@id=\"address_from_2i\"]/option[2]")
 	    WebElement month_moveIn;
 	    
-	    @FindBy(xpath = "//*[@id=\"address_from_1i\"]/option[3]")
+	    @FindBy(xpath = "//*[@id=\"address_from_1i\"]/option[6]")
 	    WebElement year_moveIn;   
-	    
+	  
 	    @FindBy(name = "select_address")
 	    WebElement select_address;
 	    
+	    @FindBy(xpath = "//*[@id=\"content\"]/div/div/div/form/fieldset[4]/p[3]/span/label")
+	    WebElement showPassword;
+	    
+	    @FindBy(xpath = "//*[@id=\"content\"]/div/div/div/form/fieldset[1]/div[5]/p[2]/a")
+	    WebElement additional_loan_purposes;
+	    
+	    @FindBy(xpath ="//*[@id=\"content\"]/div/div/div/form/fieldset[2]/div[1]/div/div/p/input")
+	    WebElement remove_address;
+	    
+	    @FindBy (xpath = "//*[@id=\"content\"]/div/div/div/form/fieldset[2]/div[2]/p/a")
+	    WebElement add_another_address;
+	    
  
-  public void PersonalInformation() {
+  public void PersonalInformation() throws InterruptedException {
 	  
 	  title.click();
 	  first_name.sendKeys(genData.generateRandomString(10));
@@ -87,26 +105,38 @@ public class SignUpPage {
 	  birth_month.sendKeys(genData.generateRandomNumber(2));
 	  birth_year.sendKeys(genData.generateRandomNumber(4));
 	  loan_reason.click();
+	  additional_loan_purposes.click();
+	  Thread.sleep(1000);
 	
   }
   
-  public void AddressHistory() {
+  public void AddressHistory() throws InterruptedException {
 	  address_postcode.sendKeys("GL53 7BY");
 	  find_address.click();
 	  selectAddress.click();
 	  month_moveIn.click();
 	  year_moveIn.click();
 	  select_address.click();
-	  
+	  add_another_address.click();
+	  address_postcode.sendKeys("GL53 7BY");
+	  find_address.click();
+	  selectAddress.click();
+	  month_moveIn.click();
+	  year_moveIn.click();
+	  select_address.click();
+	  Thread.sleep(1000);
+	  remove_address.click();
   }
   
   public void FinantialDetails() {
 	  finantial_details.click();
 	  annual_income.sendKeys(genData.generateRandomNumber(5));
 	  own_home.click();
-	  //montly_rent.sendKeys(genData.generateRandomNumber(5));
+	  montly_rent.sendKeys(genData.generateRandomNumber(3));
 	  member_password.click();
-	  member_password.sendKeys(genData.generateRandomAlphaNumeric(8));  
+	  member_password.sendKeys(genData.generateRandomAlphaNumeric(15));  
+	  showPassword.click();
+	  
 	  
   }
 
