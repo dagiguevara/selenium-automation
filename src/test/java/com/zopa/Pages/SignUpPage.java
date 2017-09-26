@@ -124,7 +124,7 @@ public class SignUpPage {
 	  month_moveIn.click();
 	  year_moveIn.click();
 	  select_address.click();
-	  Thread.sleep(1000);
+	  Thread.sleep(3000);
 	  remove_address.click();
   }
   

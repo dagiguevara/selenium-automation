@@ -1,16 +1,21 @@
 package com.zopa.Tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.LogStatus;
 import com.zopa.Pages.SignUpPage;
-import Resources.Init;
+import Resources.SIgnUp_Initialization;
 import Resources.extentFactory;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertFalse;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 
 
 
-public class SignUpFlow extends Init {
+public class SignUpFlow extends SIgnUp_Initialization {
 	
 	
 	
@@ -21,7 +26,8 @@ public class SignUpFlow extends Init {
 	test = report.startTest("Sign Up Flow Happy Path");
 	SignUpPage SignUp =  PageFactory.initElements(driver, SignUpPage.class);
 	driver.findElement(By.id("member_email")).sendKeys(genData.generateEmail(30));
-	test.log(LogStatus.PASS, "Validaxte Email PASSED");
+	Assert.assertNotEquals(driver.findElement(By.cssSelector(".member-email>p")).getAttribute("class"),  "Should have error class");
+	test.log(LogStatus.PASS, "Validate Email PASSED");
 	SignUp.PersonalInformation();
 	test.log(LogStatus.PASS, "Personal Information COMPLETE");
 	SignUp.AddressHistory();
@@ -30,7 +36,7 @@ public class SignUpFlow extends Init {
 	test.log(LogStatus.PASS, "Finantial Details COMPLETE");
 	SignUp.submit();
 	test.log(LogStatus.PASS, "Sending Information to a file.txt");
-
+   
   }
 
 }

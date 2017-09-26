@@ -7,17 +7,17 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 
-import Resources.Init;
+import Resources.SIgnUp_Initialization;
 import Resources.extentFactory;
 
 
-public class SignUp_SadPath extends Init {
+public class SignUp_SadPath extends SIgnUp_Initialization {
 	
 	
   @Test
   public void emailVerification() throws InterruptedException {
 	  report = extentFactory.getInstance();
-	  test = report.startTest("Email Validation Test");
+	  test = report.startTest("Sign Up Flow Email Validation Test");
 	  driver.findElement(By.id("member_email")).sendKeys(genData.generateRandomNumber(20));
 	  driver.findElement(By.id("applications_loan_apply_last_name")).click();
 	  Thread.sleep(3000);
@@ -29,7 +29,7 @@ public class SignUp_SadPath extends Init {
   @Test 
   public void PostCodeValidation() {
 	  report = extentFactory.getInstance();
-	  test = report.startTest("Postcode Validation");
+	  test = report.startTest("SignUpFlow Postcode Validation");
 	  driver.findElement(By.id("address_postcode")).sendKeys("00000");
 	  test.log(LogStatus.PASS, "sending invalid postcode");
 	  driver.findElement(By.name("find_address")).click();

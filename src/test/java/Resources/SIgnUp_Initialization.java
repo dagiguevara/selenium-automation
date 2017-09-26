@@ -19,7 +19,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
-public class Init {
+public class SIgnUp_Initialization {
 	
 	public WebDriver driver; 
 	public ExtentReports report;
@@ -28,11 +28,11 @@ public class Init {
  
   @BeforeMethod
   public void beforeMethod() {
-	  System.setProperty("webdriver.chrome.driver", "/Users/donaldguevara/Desktop/chromedriver/");
+	     System.setProperty("webdriver.chrome.driver", "/Users/donaldguevara/Desktop/chromedriver/");
 		 driver = new ChromeDriver();
 		 driver.get("http://www.zopa.com");
 		 driver.manage().window().maximize();
-		 driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);	 
+		 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	 
 		 driver.findElement(By.xpath("//*[@id=\"footer\"]/div[3]/p/a[2]")).click();
 		 HomePage home =  PageFactory.initElements(driver, HomePage.class); 
 		 home.getLoanButton();
@@ -42,7 +42,7 @@ public class Init {
   
 	@AfterMethod
 	public void tearDown(ITestResult testResult) throws IOException {
-		/*
+		
 		if (testResult.getStatus() == ITestResult.FAILURE) {
 			screenshots.takeScreenshot(driver, testResult.getName());
 			String path = screenshots.takeScreenshot(driver, testResult.getName());
@@ -53,7 +53,7 @@ public class Init {
 		driver.quit();
 		report.endTest(test);
 		report.flush(); 
-*/
+
 	}
 
 }
