@@ -1,7 +1,5 @@
 package Resources;
 
-
-
 import com.relevantcodes.extentreports.ExtentReports;
 
 public class extentFactory {
@@ -12,7 +10,6 @@ public class extentFactory {
 		extent
 	     .addSystemInfo("Selenium Version", "2.53.1")
 	     .addSystemInfo("Platform", "Mac");
-
 		return extent;
 	}
 }

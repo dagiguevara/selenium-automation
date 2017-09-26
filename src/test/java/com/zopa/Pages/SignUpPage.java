@@ -1,27 +1,20 @@
 package com.zopa.Pages;
 
-
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-import java.util.Random;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import Resources.GenerateData;
-
-  
+ 
 
 public class SignUpPage {
 	
 	   GenerateData genData = new GenerateData();
 	   WebDriver driver;
 	   
-	
-	
 		@FindBy(id = "member_email")
 	    WebElement member_email;
 		
@@ -96,7 +89,6 @@ public class SignUpPage {
 	    
  
   public void PersonalInformation() throws InterruptedException {
-	  
 	  title.click();
 	  first_name.sendKeys(genData.generateRandomString(10));
 	  last_name.sendKeys(genData.generateRandomString(10));
@@ -107,7 +99,6 @@ public class SignUpPage {
 	  loan_reason.click();
 	  additional_loan_purposes.click();
 	  Thread.sleep(1000);
-	
   }
   
   public void AddressHistory() throws InterruptedException {
@@ -135,12 +126,8 @@ public class SignUpPage {
 	  montly_rent.sendKeys(genData.generateRandomNumber(3));
 	  member_password.click();
 	  member_password.sendKeys(genData.generateRandomAlphaNumeric(15));  
-	  showPassword.click();
-	  
-	  
+	  showPassword.click();	  
   }
-
-
   
   public void  submit() {
 	  try{
@@ -157,11 +144,7 @@ public class SignUpPage {
 		    writer.println("Member Password: " + member_password.getAttribute("value"));
 		    writer.close();
 		    
-		} catch (IOException e) {
-		   
-		}
-	 
-	   
+		} catch (IOException e) {	   
+	}   
   }
- 
 }

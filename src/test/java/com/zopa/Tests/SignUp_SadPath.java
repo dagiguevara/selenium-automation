@@ -4,9 +4,7 @@ import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import com.relevantcodes.extentreports.LogStatus;
-
 import Resources.SIgnUp_Initialization;
 import Resources.extentFactory;
 
@@ -23,7 +21,6 @@ public class SignUp_SadPath extends SIgnUp_Initialization {
 	  Thread.sleep(3000);
 	  assertEquals(driver.findElement(By.cssSelector(".member-email>p")).getAttribute("class"), "error", "Should have error class");
 	  test.log(LogStatus.PASS, "Email assertion PASSED");
-
   } 
   
   @Test 
@@ -36,7 +33,6 @@ public class SignUp_SadPath extends SIgnUp_Initialization {
 	  test.log(LogStatus.PASS, "finding address");
 	  String message = driver.findElement(By.id("error_addresses")).getText();
 	  Assert.assertTrue(message.contains("We can't find this address, please try again"));
-	  test.log(LogStatus.PASS, "getting Invalid postcode error message");
-	  
+	  test.log(LogStatus.PASS, "getting Invalid postcode error message");  
   }
 }
