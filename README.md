@@ -12,15 +12,17 @@
 	* Check that Packages are available
 	
 	* TestNG:
+	
 	```
 	<dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.9.10</version>
             <scope>test</scope>
-        </dependency> ```
+        </dependency> 
+	```
+	* Selenium-Java:
 	
-	Selenium-Java:
 	```
 	<dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -29,15 +31,19 @@
             <scope>test</scope>
         </dependency>
 	```
-	Extent Reports:
+	
+	* Extent Reports:
+	
 	```
 	<dependency>
              <groupId>com.relevantcodes</groupId>
     	     <artifactId>extentreports</artifactId>
     	     <version>2.41.2</version>
 	</dependency>
-	$ mvn test-compile
+	
 	```
+	
+	``` $ mvn test-compile ```
 * You may also want to run the command below to check for outdated dependencies. Please be sure to verify and review     updates before editing your pom.xml file. The updated packages may or may not be compatible with your code.
 	```
 	$ mvn versions:display-dependency-updates
