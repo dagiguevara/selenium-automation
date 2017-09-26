@@ -5,9 +5,11 @@
 1.  Global Dependencies
 	* [Install Maven](https://maven.apache.org/install.html)
 	* Or Install Maven with [Homebrew](http://brew.sh/)
+	
 	```
 	$ brew install maven
-        ```
+	
+    
 2. Project Dependencies
 	* Check that Packages are available
 	
@@ -20,6 +22,7 @@
             <version>6.9.10</version>
             <scope>test</scope>
         </dependency> 
+	
 	```
 	* Selenium-Java:
 	
@@ -30,6 +33,7 @@
             <version>2.53.1</version>
             <scope>test</scope>
         </dependency>
+	
 	```
 	
 	* Extent Reports:
