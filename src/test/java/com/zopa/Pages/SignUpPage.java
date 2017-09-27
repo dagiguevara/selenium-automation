@@ -109,7 +109,7 @@ public class SignUpPage {
 	  year_moveIn.click();
 	  select_address.click();
 	  add_another_address.click();
-	  address_postcode.sendKeys("GL53 7BY");
+	  address_postcode.sendKeys("SW1W 9ET");
 	  find_address.click();
 	  selectAddress.click();
 	  month_moveIn.click();
@@ -132,16 +132,15 @@ public class SignUpPage {
   public void  submit() {
 	  try{
 		    PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("myfile.txt", true)));
-		    writer.println("email:" + member_email.getAttribute("value"));
-		    writer.println("first name: " + first_name.getAttribute("value"));
-		    writer.println("last name: " + last_name.getAttribute("value"));
-		    writer.println("Home Phone Number: " + home_phoneNumber.getAttribute("value"));
-		    writer.println("birthday: " + birth_day.getAttribute("value"));
-		    writer.println(" " +  birth_month.getAttribute("value"));
-		    writer.println(" " + birth_year.getAttribute("value"));
-		    writer.println("Address Post Code: GL53 7BY ");
-		    writer.println("Annual Income: " + annual_income.getAttribute("value"));
-		    writer.println("Member Password: " + member_password.getAttribute("value"));
+		    writer.println( member_email.getAttribute("value"));
+		    writer.println(", " + first_name.getAttribute("value"));
+		    writer.println(", " + last_name.getAttribute("value"));
+		    writer.println(", " + home_phoneNumber.getAttribute("value"));
+		    writer.println(", " + birth_day.getAttribute("value"));
+		    writer.println(", " +  birth_month.getAttribute("value"));
+		    writer.println(", " + birth_year.getAttribute("value"));
+		    writer.println(", GL53 7BY ");
+		    writer.println(", " + annual_income.getAttribute("value"));
 		    writer.close();
 		    
 		} catch (IOException e) {	   

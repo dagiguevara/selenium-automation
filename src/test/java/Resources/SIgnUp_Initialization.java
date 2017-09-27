@@ -27,7 +27,7 @@ public class SIgnUp_Initialization {
 	public GenerateData genData = new GenerateData();
  
   @BeforeMethod
-  public void beforeMethod() {
+  public void beforeMethod() throws InterruptedException {
 	     System.setProperty("webdriver.chrome.driver", "/Users/donaldguevara/Desktop/chromedriver/");
 		 driver = new ChromeDriver();
 		 driver.get("http://www.zopa.com");
