@@ -1,0 +1,699 @@
+{
+	"id": "c08d46db-006e-16b5-e050-7e513839173c",
+	"name": "Zopa API testing",
+	"description": "Zopa test suite for recruitment process",
+	"order": [
+		"f5294ccd-90c1-a445-a93b-ec3f8045620b",
+		"dcee26c8-8545-3484-db7d-aae4b24b3764",
+		"61d63fac-1fa1-8993-8b36-6a8595609b78",
+		"1f5e940a-2a2d-fc5a-12be-7c73294a16dc",
+		"43ac575c-0154-e1a7-06ec-f3f56b65cd22",
+		"66acc986-2f05-7417-1b1d-15be9eb0bc95",
+		"01cc6405-64b3-2321-662d-3002a05ca4bc",
+		"5dfb0fc4-7fb3-e990-56bd-8d4900befa83",
+		"7bf75f05-ddda-03c0-003b-a81d0cd2acf6",
+		"5dda4281-5d82-f6fd-6c88-58093fe4339c",
+		"dea826cb-78a7-a3f9-745c-f998a92c4d2a",
+		"ac9e98c4-904b-16e3-da9a-5a8e9840e32c",
+		"9d57a332-d1f4-a1e5-fdbb-1bcfac072de1",
+		"39500098-8be1-035b-4469-16a09c5e5efc",
+		"f7d27af0-9d8b-33e7-d6b0-8c22e577494f",
+		"c19ccaf0-4c79-a77f-c108-029b1d6d2f16",
+		"64433a3d-eb6a-4e50-ae65-99087cd184c8",
+		"43fe3976-091a-0a34-c3fe-fe4439275556",
+		"09b7c77d-af7b-f630-10f8-d25047199ed7",
+		"a338c2a2-7d6c-c41d-6180-0117cedcf4d2",
+		"a8566d12-077b-903c-a873-ab6f97c8aec8",
+		"4271c3bd-a35b-8a34-38a6-7832873be158"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1506404958646,
+	"owner": "234646",
+	"public": false,
+	"requests": [
+		{
+			"id": "01cc6405-64b3-2321-662d-3002a05ca4bc",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453610985,
+			"name": "email.validation.validFormat",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"1998-04-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "09b7c77d-af7b-f630-10f8-d25047199ed7",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506538761424,
+			"name": "company_name.unemployed",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"N/A\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "1f5e940a-2a2d-fc5a-12be-7c73294a16dc",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453589392,
+			"name": "parameters.optionalParameters.happyPath",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"c53c6738cf07@example.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"1998-04-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "39500098-8be1-035b-4469-16a09c5e5efc",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453657213,
+			"name": "postCode.invalidFormat.2",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"000 000\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "4271c3bd-a35b-8a34-38a6-7832873be158",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506538788571,
+			"name": "address.unemployed",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"N/A\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "43ac575c-0154-e1a7-06ec-f3f56b65cd22",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453599776,
+			"name": "email.validation.invalidFormat",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"example.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"1998-04-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "43fe3976-091a-0a34-c3fe-fe4439275556",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506538746614,
+			"name": "salary.unemployed",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"0\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "5dda4281-5d82-f6fd-6c88-58093fe4339c",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453636955,
+			"name": "phoneNumber.valid",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"1998-04-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "5dfb0fc4-7fb3-e990-56bd-8d4900befa83",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453621889,
+			"name": "phoneNumber.invalid.Format.alphanumeric",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"1998-04-12\",\n  \"home_phone\": \"dagi4567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "61d63fac-1fa1-8993-8b36-6a8595609b78",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453584143,
+			"name": "parameters.optionalParameters.sadPath",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n \n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "64433a3d-eb6a-4e50-ae65-99087cd184c8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453671721,
+			"name": "start_date.valid",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "66acc986-2f05-7417-1b1d-15be9eb0bc95",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453605328,
+			"name": "email.validation.invalid.60characters",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"jhskjhskjshkjshskjhskjshkjshskjhskjshkjshskjhskjshkjshksj@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"1998-04-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "7bf75f05-ddda-03c0-003b-a81d0cd2acf6",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453630494,
+			"name": "phoneNumber.InvalidFormat.whiteSpaces",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"1998-04-12\",\n  \"home_phone\": \"01234 567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "9d57a332-d1f4-a1e5-fdbb-1bcfac072de1",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453652283,
+			"name": "postCode.invalidFormat",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"00000\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "a338c2a2-7d6c-c41d-6180-0117cedcf4d2",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506538767816,
+			"name": "time_at.unemployed",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 0,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "a8566d12-077b-903c-a873-ab6f97c8aec8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506538778787,
+			"name": "job_tittle.unemployed",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"N/A\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "ac9e98c4-904b-16e3-da9a-5a8e9840e32c",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453647404,
+			"name": "dateOfBirth.validFormat",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "c19ccaf0-4c79-a77f-c108-029b1d6d2f16",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453667006,
+			"name": "start_date.invalid",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"12/12/2009\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "dcee26c8-8545-3484-db7d-aae4b24b3764",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453578622,
+			"name": "parameters.required.happyPath",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"c53c6738cf07@example.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"1998-04-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"addresses\": [\n    {\n      \n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\"\n      \n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  }\n  \n}\n"
+		},
+		{
+			"id": "dea826cb-78a7-a3f9-745c-f998a92c4d2a",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"folder": null,
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453641611,
+			"name": "dateOfBirth.invalidFormat",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"04/12/1998\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		},
+		{
+			"id": "f5294ccd-90c1-a445-a93b-ec3f8045620b",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '400';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453573572,
+			"name": "parameters.required.sadPath",
+			"description": "validate Parameters required, sending all the required fields empty",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 0,\n  \"loan_term\": 0,\n  \"email\": \"\",\n  \"first_name\": \"\",\n  \"last_name\": \"\",\n  \"title\": \"\",\n  \"date_of_birth\": \"\",\n  \"home_phone\": \"\",\n  \"employment_status\": \"\",\n  \"residential_status\": \"\",\n  \"loan_purpose\": \"\",\n  \"rent\": 0,\n  \"additional_income\": 0,\n  \"newsletter_updates\": false,\n  \"addresses\": [\n    {\n      \"house_number\": \"\",\n      \"house_name\": \"\",\n      \"street_1\": \"\",\n      \"street_2\": \"\",\n      \"post_town\": \"\",\n      \"post_code\": \"\",\n      \"start_date\": \"\",\n      \"ptcabs\": \"\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"\",\n    \"salary\": \"\",\n    \"time_at\": 0,\n    \"job_title\": \"\",\n    \"address\": \"\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"\",\n      \"quantity\": 0,\n      \"price\": 0,\n      \"deposit\": 0,\n      \"details\": \"\"\n    }\n  ]\n}"
+		},
+		{
+			"id": "f7d27af0-9d8b-33e7-d6b0-8c22e577494f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://host/v1/quote/without-credit-file",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status Code is correct\"] = responseCode.code == '200';\n\ntry {\n\ttests[\"Response.Body is correct\"] = !_.isEmpty(JSON.parse(responseBody).Body);\n}\ncatch(e) {\n\ttests[\"Response.Body is correct\"] = false;\n\tconsole.log(\"Could not parse JSON\");\n}\n\ntests[\"Response time is correct\"] = responseTime < '3000';\n\n",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1506453661681,
+			"name": "postCode.validFormat",
+			"description": "validate Parameters required",
+			"collectionId": "c08d46db-006e-16b5-e050-7e513839173c",
+			"responses": [],
+			"rawModeData": "{\n  \"loan_amount\": 1200,\n  \"loan_term\": 24,\n  \"email\": \"donald@test.com\",\n  \"first_name\": \"Bob\",\n  \"last_name\": \"Bob\",\n  \"title\": \"Mr\",\n  \"date_of_birth\": \"2009-12-12\",\n  \"home_phone\": \"01234567890\",\n  \"employment_status\": \"EMPLOYED_FULL_TIME\",\n  \"residential_status\": \"OWNER_WITH_MORTGAGE\",\n  \"loan_purpose\": \"CAR\",\n  \"rent\": 1250,\n  \"additional_income\": 500,\n  \"newsletter_updates\": true,\n  \"addresses\": [\n    {\n      \"house_number\": \"123\",\n      \"house_name\": \"The Old Post Office\",\n      \"street_1\": \"Long Road\",\n      \"street_2\": \"Park Lane\",\n      \"post_town\": \"London\",\n      \"post_code\": \"a11aa\",\n      \"start_date\": \"2009-12-12\",\n      \"ptcabs\": \"PTCAB010000\"\n    }\n  ],\n  \"current_employer\": {\n    \"company_name\": \"Zopa\",\n    \"salary\": \"string\",\n    \"time_at\": 36,\n    \"job_title\": \"Hard Worker\",\n    \"address\": \"123 Street Lane\"\n  },\n  \"assets\": [\n    {\n      \"description\": \"Apple iPhone 11X\",\n      \"quantity\": 4,\n      \"price\": 99.99,\n      \"deposit\": 0,\n      \"details\": \"{ \\\"manufacturer\\\": \\\"Apple\\\" }\"\n    }\n  ]\n}\n"
+		}
+	]
+}
