@@ -18,7 +18,8 @@ public class SignUpFlow extends SIgnUp_Initialization {
 	test = report.startTest("Sign Up Flow Happy Path");
 	SignUpPage SignUp =  PageFactory.initElements(driver, SignUpPage.class);
 	driver.findElement(By.id("member_email")).sendKeys(genData.generateEmail(30));
-	Assert.assertNotEquals(driver.findElement(By.cssSelector(".member-email>p")).getAttribute("class"),  "Correct Email Format");
+	Thread.sleep(1000);
+	Assert.assertNotEquals(driver.findElement(By.cssSelector(".member-email>p")).getAttribute("class"), "error" , "should not have error class");
 	test.log(LogStatus.PASS, "Validate Email PASSED");
 	SignUp.PersonalInformation();
 	test.log(LogStatus.PASS, "Personal Information COMPLETE");

@@ -1,5 +1,7 @@
 package Resources;
 
+import java.util.Random;
+
 import org.apache.commons.lang.RandomStringUtils;
 
 
@@ -41,5 +43,17 @@ public class GenerateData {
 		  String temp=RandomStringUtils.random(length,allowedChars);
 		  url=temp.substring(0,3)+"."+temp.substring(4,temp.length()-4)+"."+temp.substring(temp.length()-3);
 		  return url;
+		 }
+		 public String generateRandomDay() {
+			 int day = (int) (Math.random() * (30)) + 1;
+			 return String.valueOf(day);
+		 }
+		 public String generateRandomMonth() {
+			 int month = (int) (Math.random() * (12)) + 1;
+			 return String.valueOf(month);
+		 }
+		 public String generateRandomyear() {
+			 int year = (int) (Math.random() * (1997-1900) + 1900); 
+			 return String.valueOf(year);
 		 }
 }

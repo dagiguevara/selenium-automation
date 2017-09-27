@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44992" started-at="2017-09-27T01:35:26Z" finished-at="2017-09-27T01:36:11Z">
+  <suite name="Default suite" duration-ms="38942" started-at="2017-09-27T05:47:07Z" finished-at="2017-09-27T05:47:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44992" started-at="2017-09-27T01:35:26Z" finished-at="2017-09-27T01:36:11Z">
+    <test name="Default test" duration-ms="38942" started-at="2017-09-27T05:47:07Z" finished-at="2017-09-27T05:47:46Z">
       <class name="com.zopa.Tests.SignUpFlow">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.zopa.Tests.SignUpFlow@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="23175" started-at="2017-09-26T19:35:26Z" finished-at="2017-09-26T19:35:50Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.zopa.Tests.SignUpFlow@6a41eaa2]" name="beforeMethod" is-config="true" duration-ms="18429" started-at="2017-09-26T23:47:07Z" finished-at="2017-09-26T23:47:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="SignUpFlow()[pri:0, instance:com.zopa.Tests.SignUpFlow@6a41eaa2]" name="SignUpFlow" duration-ms="21427" started-at="2017-09-26T19:35:50Z" finished-at="2017-09-26T19:36:11Z">
+        <test-method status="PASS" signature="SignUpFlow()[pri:0, instance:com.zopa.Tests.SignUpFlow@6a41eaa2]" name="SignUpFlow" duration-ms="20078" started-at="2017-09-26T23:47:25Z" finished-at="2017-09-26T23:47:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignUpFlow -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.zopa.Tests.SignUpFlow@6a41eaa2]" name="tearDown" is-config="true" duration-ms="379" started-at="2017-09-26T19:36:11Z" finished-at="2017-09-26T19:36:11Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.zopa.Tests.SignUpFlow@6a41eaa2]" name="tearDown" is-config="true" duration-ms="425" started-at="2017-09-26T23:47:45Z" finished-at="2017-09-26T23:47:46Z">
           <params>
             <param index="0">
               <value>

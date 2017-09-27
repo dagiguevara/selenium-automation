@@ -13,6 +13,8 @@ import Resources.GenerateData;
 public class SignUpPage {
 	
 	   GenerateData genData = new GenerateData();
+	   
+	   
 	   WebDriver driver;
 	   
 		@FindBy(id = "member_email")
@@ -93,9 +95,9 @@ public class SignUpPage {
 	  first_name.sendKeys(genData.generateRandomString(10));
 	  last_name.sendKeys(genData.generateRandomString(10));
 	  home_phoneNumber.sendKeys(genData.generateRandomNumber(10));
-	  birth_day.sendKeys(genData.generateRandomNumber(2));
-	  birth_month.sendKeys(genData.generateRandomNumber(2));
-	  birth_year.sendKeys(genData.generateRandomNumber(4));
+	  birth_day.sendKeys(genData.generateRandomDay());
+	  birth_month.sendKeys(genData.generateRandomMonth());
+	  birth_year.sendKeys(genData.generateRandomyear());
 	  loan_reason.click();
 	  additional_loan_purposes.click();
 	  Thread.sleep(1000);
