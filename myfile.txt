@@ -1,1 +1,0 @@
-Email, first name, last name, phone number, birth day, birth month, birth year, anual income

@@ -6,14 +6,4 @@
       <class name="com.zopa.Tests.SignUpFlow"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.zopa.Tests.SignUpFlow">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="SignUpFlow"/>
-        </methods>
-      </class> <!-- com.zopa.Tests.SignUpFlow -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

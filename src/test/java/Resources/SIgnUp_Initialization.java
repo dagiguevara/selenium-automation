@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -36,6 +37,9 @@ public class SIgnUp_Initialization {
 		 driver.findElement(By.xpath("//*[@id=\"footer\"]/div[3]/p/a[2]")).click();
 		 HomePage home =  PageFactory.initElements(driver, HomePage.class); 
 		 home.getLoanButton();
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("scroll(250, 0)"); 
+		 jse.executeScript("scroll(0, 250)"); 
 		 LoansPage loan =  PageFactory.initElements(driver, LoansPage.class); 
 		 loan.submitLoan();
   }

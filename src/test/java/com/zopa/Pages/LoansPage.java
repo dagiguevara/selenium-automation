@@ -7,11 +7,8 @@ import org.openqa.selenium.support.FindBy;
 public class LoansPage {
 	 @FindBy(id = "submit-loan-button")
 	 WebElement submitLoan;
-	 @FindBy(xpath = "//*[@id=\"submit-loan-button\"]")
-	 WebElement term;
- 
-	    
-  public void submitLoan() throws InterruptedException {
+	
+  public void submitLoan(){
 	  submitLoan.click();
   }
 }

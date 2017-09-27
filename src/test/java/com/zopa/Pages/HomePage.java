@@ -9,7 +9,6 @@ public class HomePage {
     WebElement getLoanButton;
  
   public void getLoanButton() {
-	  getLoanButton.click();
-	  
+	  getLoanButton.click();  
   }
 }

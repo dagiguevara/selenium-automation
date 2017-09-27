@@ -131,16 +131,17 @@ public class SignUpPage {
   
   public void  submit() {
 	  try{
-		    PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("myfile.txt", true)));
-		    writer.println( member_email.getAttribute("value"));
-		    writer.println(", " + first_name.getAttribute("value"));
-		    writer.println(", " + last_name.getAttribute("value"));
-		    writer.println(", " + home_phoneNumber.getAttribute("value"));
-		    writer.println(", " + birth_day.getAttribute("value"));
-		    writer.println(", " +  birth_month.getAttribute("value"));
-		    writer.println(", " + birth_year.getAttribute("value"));
-		    writer.println(", GL53 7BY ");
-		    writer.println(", " + annual_income.getAttribute("value"));
+		    PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("SignUp.csv", true)));
+		    writer.append( member_email.getAttribute("value"));
+		    writer.append(", " + first_name.getAttribute("value"));
+		    writer.append(", " + last_name.getAttribute("value"));
+		    writer.append(", " + home_phoneNumber.getAttribute("value"));
+		    writer.append(", " + birth_day.getAttribute("value"));
+		    writer.append(", " +  birth_month.getAttribute("value"));
+		    writer.append(", " + birth_year.getAttribute("value"));
+		    writer.append(", GL53 7BY");
+		    writer.append(", " + annual_income.getAttribute("value"));
+		    writer.println("");
 		    writer.close();
 		    
 		} catch (IOException e) {	   
