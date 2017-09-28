@@ -1,6 +1,6 @@
 package com.zopa.Tests;
-import static org.testng.Assert.assertEquals;
 
+import static org.testng.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -34,8 +34,9 @@ public class SignUp_SadPath extends SIgnUp_Initialization {
 	  String postcode_message = driver.findElement(By.id("error_addresses")).getText();
 	  Assert.assertTrue(postcode_message.contains("We can't find this address, please try again"));
 	  test.log(LogStatus.PASS, "getting Invalid postcode error message");  
+	  
   }
-  @Test // this test will fail since the phone number UI field doesn't validating phone number format or show any error message
+  @Test // this test will fail since the phone number UI field doesn't validate phone number format or show any error message
   public void PhoneNumberValidation() {
 	  report = extentFactory.getInstance();
 	  test = report.startTest("SignUpFlow Phone Number Validation");

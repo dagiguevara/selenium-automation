@@ -13,8 +13,6 @@ import Resources.GenerateData;
 public class SignUpPage {
 	
 	   GenerateData genData = new GenerateData();
-	   
-	   
 	   WebDriver driver;
 	   
 		@FindBy(id = "member_email")
