@@ -28,6 +28,6 @@ public class SignUpFlow extends SIgnUp_Initialization {
 	SignUp.FinantialDetails();
 	test.log(LogStatus.PASS, "Finantial Details COMPLETE");
 	SignUp.submit();
-	test.log(LogStatus.PASS, "Sending Information to a file.txt");  
+	test.log(LogStatus.PASS, "Sending Information to SignUp.csv");  
   }
 }

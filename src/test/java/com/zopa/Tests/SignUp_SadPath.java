@@ -15,8 +15,9 @@ public class SignUp_SadPath extends SIgnUp_Initialization {
   @Test
   public void emailVerification() throws InterruptedException {
 	  report = extentFactory.getInstance();
-	  test = report.startTest("Sign Up Flow Email Validation Test");
+	  test = report.startTest("Sign Up Flow, Email Validation Test");
 	  driver.findElement(By.id("member_email")).sendKeys(genData.generateRandomNumber(20));
+	  test.log(LogStatus.PASS, "entering invalid email format");
 	  driver.findElement(By.id("applications_loan_apply_last_name")).click();
 	  Thread.sleep(3000);
 	  assertEquals(driver.findElement(By.cssSelector(".member-email>p")).getAttribute("class"), "error", "Should have error class");
