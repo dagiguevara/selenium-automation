@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Parallel]" parallel="tests">
+  <test name="HappyPath">
+    <classes>
+      <class name="com.zopa.Tests.SignUpFlow"/>
+    </classes>
+  </test> <!-- HappyPath -->
+  <test name="unhappyPath">
+    <classes>
+      <class name="com.zopa.Tests.SignUp_SadPath"/>
+    </classes>
+  </test> <!-- unhappyPath -->
+  <test name="unhappyPath(failed)" parallel="tests">
+    <classes>
+      <class name="com.zopa.Tests.SignUpFlow">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.zopa.Tests.SignUpFlow -->
+      <class name="com.zopa.Tests.SignUp_SadPath">
+        <methods>
+          <include name="tearDown"/>
+          <include name="PhoneNumberValidation"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.zopa.Tests.SignUp_SadPath -->
+    </classes>
+  </test> <!-- unhappyPath(failed) -->
+</suite> <!-- Failed suite [Parallel] -->

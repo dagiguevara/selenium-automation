@@ -3,8 +3,8 @@
 <suite name="Single">
     <test name="SingleTest">
         <classes> 
-            <class name="com.zopa.Tests.SignUpFlow"/>
-            <class name= "com.zopa.Tests.SignUp_SadPath"/>
+            <class name="com.zopa.Tests.docker"/>
+            <class name= "com.zopa.Tests.docker1"/>
         </classes>
     </test>
 </suite>
