@@ -56,7 +56,4 @@
 	
 	### Additional Information
 	
-  1. I created two classes to cover the Sign Up flow scenarios, SignUpFlow and SignUp_SadPath
-  2. Sign Up flow contain a normal flow in the Sign Up process and storing the randomize data in SignUp.csv
-  3. SignUp_SadPath contain 3 different tests in this class, that include the following assertions: email validation, 	            post code validation and phone number validation (phone number validation test it will fail because the UI                      doesn't validate a correct phone number format
-  4. You can run the tests with a simple command in the console `mvn test -U -Psingle` if you want to run it in parallel             `mvn test -U -Pparallel`
+ 
