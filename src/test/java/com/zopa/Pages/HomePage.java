@@ -12,3 +12,5 @@ public class HomePage {
 	  getLoanButton.click();  
   }
 }
+
+//testing 
