@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 
-public class docker1 {
+public class createDrivers {
 	RemoteWebDriver driver;
 	
   @Test

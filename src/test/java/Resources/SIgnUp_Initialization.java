@@ -59,8 +59,8 @@ public class SIgnUp_Initialization {
 			
 		}	
 		driver.quit();
-		report.endTest(test);
-		report.flush(); 
+		//report.endTest(test);
+		//report.flush(); 
 
 	}
 
